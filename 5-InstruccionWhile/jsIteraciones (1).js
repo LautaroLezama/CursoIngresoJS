@@ -6,8 +6,10 @@ function mostrar()
 	
 	while (num1 < 11) {
 
-		alert(num1);
+		
+		console.log(num1);
 		num1 ++;
+		
 
 
 	}
