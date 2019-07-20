@@ -1,22 +1,20 @@
 function mostrar() {
 
-	var contador = 0;
+	var num1 = 0;
 	var acumulador = 0;
-	var respuesta
+	var contador = 0;
 
-	respuesta = "si"
+	while (contador < 5) {
 
-	while (respuesta == "si") {
+		num1 = prompt("Digite el número");
 
-		contador = prompt("Digite el número");
+		num1 = parseInt(num1);
 
-		acumulador 
+		acumulador = acumulador + num1;	
 
-		respuesta = prompt("si para seguir");
+		contador ++;
 
 	}
-
-
 
 
 	document.getElementById('suma').value = acumulador;
