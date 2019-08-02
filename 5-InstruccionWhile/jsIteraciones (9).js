@@ -23,11 +23,11 @@ function mostrar() {
 
 		//Entran en el else if xq a partir de aca son todos el segundo numero en adelante.
 
-		} else if(num1 > maximo){
+		} if(num1 > maximo){
 	 
 		maximo = num1;
 
-		} else if(num1 < minimo){
+		} if(num1 < minimo){
 
 		minimo = num1;
 
