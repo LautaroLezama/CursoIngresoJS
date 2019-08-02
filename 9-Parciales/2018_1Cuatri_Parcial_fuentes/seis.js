@@ -40,16 +40,16 @@ function mostrar() {
 
             if (hora >= 20 && hora <= 24) {
 
-                mensaje = "a dormir";
+                alert("a dormir");
 
             }
+            
             break;
+
 
         default:
             mensaje = "No es una hora valida";
             break;
-
-
 
     }
 
