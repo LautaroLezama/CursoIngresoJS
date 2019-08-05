@@ -1,75 +1,57 @@
 function mostrar() {
 
     var nota;
-    var sexo;
-    var contador = 0;
-    var promedio = 0;
+    var promedio;
+    var notamin;
     var contadorvaron = 0;
-    var notamin = 0;
-    var acumulador = 0;
+    var sexo;
     var sexomin;
+    var acumulador = 0;
+    var contador = 0;
 
+    while(contador < 5){
 
+    nota = prompt("Ingresar una nota");
 
-    while (contador < 5) {
+    while(isNaN(nota) || nota < 1 || nota > 10 ){
 
-        contador ++;
+        nota = prompt("Nota invalida, ingresar una nota");
+    } 
 
-        nota = prompt("Ingrese la nota");
+    nota = parseInt(nota);
 
-        while (isNaN(nota) || nota < 0 || nota > 10) {
+    sexo = prompt("Ingresar el sexo con f o m");
 
-            nota = prompt("No es una nota valida, ingrese la nota: ");
-    
-        }
-    
-        sexo = prompt("Ingrese el sexo");
-    
-        while (sexo != "m" && sexo != "f") {
-    
-            sexo = prompt("No es un sexo valido, ingrese el sexo: ");
-        
-        }
+    while(sexo != "f" && sexo != "m"){
 
-        nota = parseInt(nota);
+        sexo = prompt("Sexo invalido, ingresar el sexo con f o m");
+    }
 
-        if (contador == 1 || nota < notamin) {
+    if (contador == 0){
 
-            notamin = nota;
+        notamin = nota;
+        sexomin = sexo;
+    }
 
-            sexomin = sexo;
-        } 
+    if(nota < notamin){
 
-        if (sexo == "m" && nota > 5) {
+        notamin = nota;
+        sexomin = sexo;
+    }
 
-            contadorvaron ++;
-        }
+    if(sexo == "m" && nota >= 6){
 
-        acumulador = nota + acumulador;
+        contadorvaron ++;
+    }
 
+    acumulador = acumulador + nota;
+
+    contador ++;
     }
 
     promedio = acumulador / contador;
-
-    alert("El promedio de las notas es " + promedio + ". La nota màs baja es " + notamin + " y su sexo es " + sexomin + ". La cantidad de varones que aprobaron con 6 o más es de " + contadorvaron);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    alert("El promedio de las notas es " + promedio + ". La nota más baja es " + notamin + " y su sexo es " + sexomin + ". La cantidad de varones que aprobaron fue de " + contadorvaron);
 
 
 }
+
