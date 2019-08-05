@@ -14,7 +14,7 @@ function mostrar() {
     var minimo;
 
 
-    while (respuesta == "si") {
+    do {
 
         marca = prompt("Ingrese la marca del producto");
 
@@ -64,8 +64,7 @@ function mostrar() {
 
         contador ++;
 
-        respuesta = prompt("si para continuar");
-    }
+    } while (confirm("Quieres poner otro nùmero?"))
 
     promediopeso = acumuladorpeso / contador;
 

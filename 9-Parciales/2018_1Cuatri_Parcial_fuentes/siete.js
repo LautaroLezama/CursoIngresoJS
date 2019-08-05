@@ -20,11 +20,11 @@ function mostrar() {
 
     nota = parseInt(nota);
 
-    sexo = prompt("Ingresar el sexo con f o m");
+    sexo = prompt("Ingresar el sexo con f o m").toLowerCase(); //toLowerCase para pasarlo a minuscula
 
     while(sexo != "f" && sexo != "m"){
 
-        sexo = prompt("Sexo invalido, ingresar el sexo con f o m");
+        sexo = prompt("Sexo invalido, ingresar el sexo con f o m").toLowerCase(); //Si son caracteres especificos va en los 2. SI es cualquier letra lo pasamos al final.
     }
 
     if (contador == 0){
@@ -50,7 +50,7 @@ function mostrar() {
     }
 
     promedio = acumulador / contador;
-    alert("El promedio de las notas es " + promedio + ". La nota más baja es " + notamin + " y su sexo es " + sexomin + ". La cantidad de varones que aprobaron fue de " + contadorvaron);
+    alert("El promedio de las notas es " + promedio + ".\nLa nota más baja es " + notamin + " y su sexo es " + sexomin + ".\nLa cantidad de varones que aprobaron fue de " + contadorvaron + ".");
 
 
 }

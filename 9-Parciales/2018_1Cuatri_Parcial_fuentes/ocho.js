@@ -7,7 +7,7 @@ function mostrar() {
     var contadorimpares = 0;
     var contadorceros = 0;
     var contadorpos = 0;
-    var promediopos;
+    var promediopos = 0;
     var acumuladorpos = 0;
     var acumuladorneg = 0;
     var maximo;
@@ -16,7 +16,7 @@ function mostrar() {
     var letramax;
     var letramin;
 
-    while (respuesta == "si") {
+    do {
 
         num1 = prompt("Ingrese un número");
 
@@ -30,11 +30,13 @@ function mostrar() {
 
         letra = prompt("Ingrese una letra");
 
-        while(!isNaN(letra)){
+        /*while(!isNaN(letra) || letra.length > 1){ FALTAN COSAS PARA HACERLO A MEDIAS NO LO HAGAS CAPO.
 
             letra = prompt("Tiene que ser una letra, ingrese una letra");
-        }
+        }*/
 
+        letra = letra.toLowerCase();
+        
         if (num1 % 2 == 0){
 
             contadorpares ++;
@@ -55,7 +57,7 @@ function mostrar() {
 
             acumuladorneg = num1 + acumuladorneg;
 
-        } else if (num1 == 0){
+        } else {
 
             contadorceros ++;
 
@@ -86,10 +88,12 @@ function mostrar() {
 
         contador ++;
 
-        respuesta = prompt("si para continuar");
+    } while(confirm("Quiere continuar?"))
 
-    }
+
     promediopos = acumuladorpos / contadorpos
+
+    
 
     document.write("La cantidad de números pares es " + contadorpares + "<br>");
     document.write("La cantidad de números impares es " + contadorimpares + "<br>");
